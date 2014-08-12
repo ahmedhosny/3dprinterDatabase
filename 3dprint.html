@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<title>
+my 3d printer database
+</title>
+<head>
+
+<style type="text/css">
+.myContainer {
+	margin:auto;
+	padding-top: 50px;
+	width:500px;
+	clear:both;
+}
+.myContainer input{
+	width: 100%;
+	clear: both;
+}
+</style>
+
+</head>
+<body>
+
+
+<div class="myContainer">
+<h2>Hi Ahmed </h2>
+<h4>Fill in the 3d printer details...</h4>
+<form action="3dprint.php" method="post"> <!--Get or post-->
+Printer Name <input type="text" name = "printerName">
+<br>
+Printer Maker <input type="text" name="maker"> 
+<br>
+Year <input type="number" name ="year" min="1900" max="2020"> 
+<br>
+Design Country <select name="designCountry">
+<option value="usa"> USA </option>
+<option value="uk"> UK </option>
+<option value="israel"> Israel </option>
+</select>
+<br>
+Manufacture Country<select name="manufactureCountry">
+<option name ="usa"> USA </option>
+<option name="china"> China </option>
+</select>
+<br>
+Type
+<div style="text-align:center;">
+<input type="radio" value="desktop" name="type"> Desktop
+<input type="radio" value="industrial" name="type"> Industrial
+</div> 
+<br>
+Technology<select name="technology">
+<!--Extrusion-->
+<optgroup label="Extrusion"> 
+	<option value="fusedDepositionModelling"> Fused Deposition Modelling (FDM) </option>
+	<option value="thermoplasticExtrusion"> Thermoplastic Extrusion </option>
+	<option value="meltedExtrusionModelling"> Melted and Extrusion Modelling (MEM) </option>
+</optgroup>
+<!--Photopolymer-->
+<optgroup label="Photopolymer"> 
+	<option value="photopolymerJetted"> Jetted Photopolymer </option>
+	<option value="3dp"> Three Dimensional Printing (3DP) </option>
+	<option value="PhotopolymerDMD"> Photopolymer exposed by deformable mirror device (DMD)</option>
+</optgroup>
+<!--Wire-->
+<optgroup label="Wire"> 
+	<option value="ebf"> Electron Beam Freeform Fabrication (EBF)</option>
+</optgroup>
+<!--Granular-->
+<optgroup label="Granular">
+	<option value="dmls"> Direct Metal Laser Sintering (DMLS)</option>
+	<option value="ebm"> Electron Beam Melting (EBM)</option>
+	<option value="slm"> Selective Laser Melting (SLM)</option>
+	<option value="shs"> Selective Heat Sintering (SHS)</option>
+	<option value="sls"> Selective Laser Sintering (SLS)</option>
+</optgroup>
+<!--Plaster-->
+<optgroup label="Plaster">
+	<option value ="pp"> Plaster-based 3D Printing (PP) </option>
+</optgroup>
+<!--Laminated-->
+<optgroup label="Laminated">
+	<option value ="lom"> Laminated Object Manufacturing (LOM) </option>
+</optgroup>
+<!--Light Polymerised-->
+<optgroup label="Light Polymerised">
+	<option value ="dlp"> Digital Light Processing (DLP)</option>
+	<option value ="sla"> Stereolithography (SLA)</option>
+</optgroup>
+<!--Unknown/other-->
+<optgroup label="Others">
+<option value="syringeDeposition"> Syringe Deposition </option>
+</optgroup>
+</select>
+<br>
+<br>
+Build Envelope - L (mm) <input type="number" name="buildL">
+W (mm) <input type="number" name="buildW">
+H (mm) <input type="number" name="buildH">
+<br>
+<br>
+Size - L (mm) <input type="number" name="sizeL">
+W (mm) <input type="number" name="sizeW">
+H (mm) <input type="number" name="sizeH">
+<br>
+Weight <input type="number" name="weight">
+<br>
+Price (USD) <input type="number" name="materialPrice">
+<br>
+Material Cost (USD) <input type="number" name="price">
+<br>
+URL <input type="text" name = "website" value="http://"> 
+<br>
+Image <input type="file" name="image">
+<br>
+<br>
+<input type="submit">
+
+<!-- add Materials - check box // speed // accuracy // notes  // material cost per ? // Open source-DIY- Fully assembled - commercial - limited availability Industrial - checkbox // img-->
+
+
+</form>
+</div>
+</body>
+</html>
